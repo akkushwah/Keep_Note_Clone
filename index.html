@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> keep</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Style sheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="main">
+    <!-- Top Header -->
+    <div class="top-header flex">
+      <div class="flex" style="gap:50px">
+        <div class="one flex">
+          <i class="fa-solid fa-bars" onclick="toggleNavBar()">
+          </i>
+          <img src="assets/asset 0.png" alt="">
+          <span class="logo-name">Keep</span>
+        </div>
+
+        <div class="two">
+          <div class="search-div flex" onclick="selectedsearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" class="header-input">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex" style="gap:40px">
+        <div class="three flex">
+          <i class="fa-solid fa-rotate-right "></i>
+          <i class="ri-gallery-view-2 font-size gridIcon" onclick="gridToggle()"></i>
+          <i class="tile" onclick="gridToggle()"><img src="assets/tile.svg"></i>
+          <i class="ri-settings-4-line font-size"></i>
+        </div>
+
+        <div class="four flex">
+          <i class="ri-layout-grid-2-fill font-size googleOptions" onclick="showdropDown()"></i>
+          <span style="opacity:1"><img src="assets/asset 1.png" alt="" style="border-radius:50%;padding:5px;"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="drop">
+      <div id="drop-scroll">
+        <div id="scroll-item">
+          <!-- <div> -->
+          <a class="drop-items" href="https://www.google.com/account/about/?hl=en-US">
+            <img src="Images/accounts.png" alt="">
+            <p>Account</p>
+          </a>
+          <!-- </div>             -->
+          <a href="https://www.google.com/" class="drop-items">
+            <img src="Images/google.png" alt="">
+            <p>Search</p>
+          </a>
+
+          <a class="drop-items" href="https://www.google.com/maps/@18.5490758,73.9242136,15z?authuser=0&entry=ttu">
+            <img src="Images/maps.png" alt="">
+            <p>Maps</p>
+          </a>
+
+          <a class="drop-items" href="https://www.youtube.com/">
+            <img src="Images/youtube.png" alt="">
+            <p>YouTube</p>
+          </a>
+
+          <a class="drop-items" href="https://play.google.com/store/games?device=windows&pli=1">
+            <img src="Images/play store.png" alt="">
+            <p>Play</p>
+          </a>
+
+          <a class="drop-items" href="https://news.google.com/home?hl=en-IN&gl=IN&ceid=IN:en">
+            <img src="Images/news.png" alt="">
+            <p>News</p>
+          </a>
+
+          <a class="drop-items" href="https://www.google.com/gmail/about/">
+            <img src="Images/gmail.png" alt="">
+            <p>Gmail</p>
+          </a>
+
+          <a class="drop-items" href="https://meet.google.com/?hs=197&authuser=0">
+            <img src="Images/meet.png" alt="">
+            <p>Meet</p>
+          </a>
+
+          <a class="drop-items" href="https://workspace.google.com/products/chat/">
+            <img src="Images/chat.png" alt="">
+            <p>Chat</p>
+          </a>
+
+          <a class="drop-items"
+            href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fcontacts.google.com%2F&followup=https%3A%2F%2Fcontacts.google.com%2F&ifkv=ARZ0qKKK36S0OyJTBFNRHHCY_x-ovSrM9u8XPneQJWVI3c3QbfS5okBXd_zYWIzrpzEsebowpjoVzw&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-804817794%3A1712388584652996&theme=mn&ddm=0">
+            <img src="/Images/contacts.png" alt="">
+            <p>Contacts</p>
+          </a>
+
+          <a class="drop-items" href="https://www.google.com/intl/en-US/drive/">
+            <img src="Images/drive.png" alt="">
+            <p>Drive</p>
+          </a>
+
+          <a class="drop-items" href="https://workspace.google.com/products/calendar/?hl=en-US">
+            <img src="Images/calender.png" alt="">
+            <p>Calender</p>
+          </a>
+
+          <a class="drop-items" href="https://translate.google.com/">
+            <img src="Images/translator'.png" alt="">
+            <p>Translator</p>
+          </a>
+
+          <a class="drop-items" href="https://www.google.com/photos/about/">
+            <img src="Images/photos.png" alt="">
+            <p>Photos</p>
+          </a>
+
+          <a class="drop-items" href="https://shopping.google.com/?nord=1">
+            <img src="Images/shopping.png" alt="">
+            <p>Shopping</p>
+          </a>
+        </div>
+        <button class="btn"><a href="https://about.google/products/">More
+            from Google</a></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- left navbar -->
+      <nav class="navbar">
+        <ul>
+          <li class="navitem active-hover" onclick="home()">
+            <i class="fa-regular fa-lightbulb"></i>
+            <span>Notes</span>
+          </li>
+          <li class="navitem">
+            <i class="fa-regular fa-bell"></i>
+            <span>Reminder</span>
+          </li>
+          <li class="navitem">
+            <i class="fa-solid fa-pencil"></i>
+            <span style="margin-left:1.8rem;">Edit Label</span>
+          </li>
+          <li class="navitem">
+            <i class="ri-inbox-archive-line"></i>
+            <span style="margin-left:1.8rem">Archieve</span>
+          </li>
+          <li class=" navitem">
+            <i class="fa-regular fa-trash-can"></i>
+            <span>Bin</span>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main page -->
+      <section class="main-container">
+        <div class="inputContainer flex">
+          <input type="text" class="inputValue" placeholder="Take a note.." onkeypress="handleKeyPress(event)">
+          <i class="fa-solid fa-plus" onclick="addNotes()"></i>
+          <i class="fa-solid fa-paintbrush"></i>
+          <i class="fa-regular fa-image"></i>
+        </div>
+        <div class="noteContainer"></div>
+
+
+        <!-- dialog page -->
+        <div class=" dialogPage flex">
+          <div class="container flex">
+            <p style="font-size: 1.8rem;">Title</p>
+            <textarea name="editNote" class="scroll" placeholder="Note" cols="15" rows="4"
+              oninput="adjustHeight(this)"></textarea>
+            <button class="dialogBtn closeBtn">Close</button>
+            <button class="dialogBtn cancelBtn">Cancel</button>
+          </div>
+        </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
